@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAMZALISTIC</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+            overflow:hidden;
+        }
+        .container{
+            width:100%;
+            background-color: rgb(255, 255, 255);
+            color:white;
+            max-height:1000px;
+            text-align: center;
+            margin:0px;
+            padding:0px;
+            float:left;
+            overflow:hidden;
+        }
+        .wrapper{
+            width:100%;
+            background-color: rgb(136, 4, 4);
+            color:white;
+            max-height:auto;
+            text-align: center;
+            margin:0px;
+            padding:0px;
+            float:left;
+            
+        }
+        .inner{
+            width:100%;
+        
+            color:white;
+            height:900px;
+            text-align: center;
+            margin:0px;
+            padding:0px;
+            
+        }
+        button{
+            background-color:rgb(161, 16, 16);
+            color:white;
+             border-radius:50%;
+             height:200px;
+             width:200px;
+             margin-top:150px;
+             font-size:32px;
+             font-weight: bolder;
+             border-style:dotted;
+             box-shadow:2px 2px 15px 15px #bbb;
+             cursor: pointer;
+
+        }
+    h4{background-color: rgb(49, 3, 3);
+       font-size:24px;
+       margin:0px;
+       padding:0px;}
+
+    h3{background-color: rgb(0, 20, 26);
+        margin:0px;
+        padding:0px;
+        font-size:24px;}
+        h1{text-shadow:5px 5px 5px #bbb}
+ </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <header><h1>Sunshine Int'l Sch</h1></header>
+            <header><h4>Sunshine Calculator</h4></header>
+           <header><h3> <marquee>Mr.Hamza(JSS1A),Miss Tubshit(JSS1B),Mrs.Chamaka(JSS1C),Mr.Fabian(JSS1D),Mr.Abbas(JSS2A),Mrs.Ausgustina(JSS2B),Miss.Martina(JSS2C),Mr.Dabo(JSS2D) Mrs.Chinzen(JSS3A) Mr.Dariya(JSS3B),Mr.Godwin(JSS3C),Mrs.Juliana(JSS3D),Mr.Sabiu(SS1A),Mr.Dashi(SS1B),Miss.Blessing(SS1C),Mr.Maigashy(SS1D),Mr.Friday(SS2A),Mr.Thomas(SS2B),Mr.Bete(SS2D),Mr.John(SS3A),Mr.Daben(SS3B),Mr Moses(SS3C),Overseer by Mr BENNY(VP) & Mr.Bulus </marquee></h3></header>
+        </div><!-- END OF WRAPPER-->
+        <!--CONTENT-->
+        <div class="inner">
+            <button type="button" id="start" onclick="  document.getElementById('start').style.backgroundColor ='green'">START</button>
+        </div>
+    </div>
+    <script>
+       
+        document.getElementById('start').addEventListener("click", myfunction);
+        
+        function myfunction() {
+            document.getElementById('start').innerHTML ='Process.....';
+            alert("The application is develop to help the class teachers to have accurate precision in calculating their weekly percentage" + " \r\n "+" DEVELOP BY MR HAMZA YAKUBU(Hamzalistic).");
+            var m = +prompt("Enter no of Student present on Monday", );
+            var t = +prompt("Enter no of Student present on Tuesday", );
+            var w = +prompt("Enter no of Student present on Wednesday", );
+            var th = +prompt("Enter no of Student present on Thursday", );
+            var f = +prompt("Enter no of Student present on Friday", );
+            alert("You just added the total attendance for the week.. please proceed");
+            var week = +prompt("Enter the no of time school open for a week", );
+            var nobg = +prompt("Enter the total numbers of student in a roll = No Boys + No Girls", );
+            var sum =(m+t+w+th+f);
+            var sub = week * nobg
+            var per = (sum/sub)*100;
+            if(m,t,w,th,f == null || m,t,w,th,f == ""){
+                alert("you fail to provide input");
+               
+            }else if(per >100 ){
+            alert("your input is wrong, cheeck and try again, your weekly percentage must not be more than 100%")
+            }
+            else{
+                //alert("the total no of student in a roll =" + sum);
+                //alert("The total number of students on roll x number of times school open = " + sub);
+               // alert("The class percentage attandance for the week is = " + per.toFixed(2)+"%");
+                alert("CLICK OK TO VIEW YOUR RESULT");
+                alert("The total attendance for a week = " + sum +"\r\n" + "The total number of students on roll x number of times school open = " + sub + "\r\n" + "The class percentage attandance for the week is =" + per.toFixed(2)+"%" );
+            }
+     }
+    </script>
+</body>
+</html>
